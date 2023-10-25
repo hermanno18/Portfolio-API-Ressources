@@ -14,7 +14,6 @@ function seed_projects() {
 
             update_post_meta($new_project_id, 'project_source_link', $project['source_link']);
             update_post_meta($new_project_id, 'project_view_link', $project['view_link']);
-            update_post_meta($new_project_id, 'project_color', $project['color']);
             update_post_meta($new_project_id, 'project_tags', $project['tags']);
             update_post_meta($new_project_id, 'project_date', $project['date']);
             update_post_meta($new_project_id, 'project_is_public', $project['is_public']);

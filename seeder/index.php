@@ -12,7 +12,7 @@ require_once(__DIR__ . '/Projects/Projects.php');
 require_once(__DIR__ . '/Companies/Companies.php');
 
 // Appeler les fonctions de seed
-seed_tools();
-seed_contacts(); // --pb
+// seed_tools();
+// seed_contacts(); // --pb
 seed_projects(); // pp
-seed_companies();
+seed_companies();// pb

@@ -11,6 +11,7 @@
     "title": "Freelance",
     "start_date":"2019-02-01",
     "end_date":"",
+    "content":"",
     "location":"Remote",
     "occupation":"FullStack Engeenier"
   },
@@ -18,6 +19,7 @@
     "title": "Gohze",
     "start_date":"2022-01-17",
     "end_date":"2022-07-03",
+    "content":"",
     "location":"Biyem-Assi, Yaounde, Cameroon",
     "occupation":"FrontEnd Engeenier"
   },
@@ -25,6 +27,7 @@
     "title": "ITS-Advisory",
     "start_date":"2022-07-04",
     "end_date":"",
+    "content":"",
     "location":"Fouda, Yaounde, Cameroon",
     "occupation":"FrontEnd Engeenier"
   }

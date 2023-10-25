@@ -2,26 +2,31 @@
   { 
     "title":"LinkedIn",
     "href":"https://www.linkedin.com/in/hermann-fokou",
+    "value": "hermann-fokou",
     "icon": "bi:linkedin"
   },
   {
     "title":"GitHub",
     "href": "https://www.github.com/hermanno18",
+    "value": "hermanno18",
     "icon": "bi:github"
   },
   {
     "title":"Youtube",
-    "href":"https://github.com/hermanno18",
+    "href":"https://youtube.com/hermanno18",
+    "value": "hermanno18",
     "icon": "bi:youtube"
   },
   {
     "title":"Figma",
     "href":"https://www.figma.com/@hermannfokou",
+    "value": "hermannfokou",
     "icon": "fa6-brands:figma"
   },
   {
     "title":"Telegram",
     "href":"https://t.me/hermanno18",
+    "value": "hermanno18",
     "icon": "bx:bxl-telegram"
   },
   {
@@ -37,7 +42,6 @@
     "icon": "ri:whatsapp-fill",
     "value": "699167012",
     "isMain": "1"
-
   },
   {
     "title": "Email",
