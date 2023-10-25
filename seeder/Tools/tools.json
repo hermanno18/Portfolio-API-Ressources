@@ -1,0 +1,190 @@
+[
+      {
+        "title": "Nuxt JS",
+        "img_link": "https://www.svgrepo.com/show/354131/nuxt-icon.svg",
+        "percentage": 100,
+        "color": "#41B883",
+        "group_title": "Developpement Web",
+        "description": ""
+      },
+      {
+        "title": "VueJS",
+        "img_link": "https://www.svgrepo.com/show/452130/vue.svg",
+        "percentage": 100,
+        "color": "#41B883",
+        "group_title": "Developpement Web",
+        "description": ""
+      },
+      {
+        "title": "React JS",
+        "img_link": "https://www.svgrepo.com/show/355190/reactjs.svg",
+        "percentage": 100,
+        "color": "#00D8FF",
+        "group_title": "Developpement Web",
+        "description": ""
+      },
+      {
+        "title": "JavaScript",
+        "img_link": "https://www.svgrepo.com/show/303206/javascript-logo.svg",
+        "percentage": 100,
+        "color": "#F7DF1E",
+        "group_title": "Developpement Web",
+        "description": ""
+      },
+      {
+        "title": "TypeScript",
+        "img_link": "https://www.svgrepo.com/show/354478/typescript-icon.svg",
+        "percentage": 100,
+        "color": "#007ACC",
+        "group_title": "Developpement Web",
+        "description": ""
+      },
+      {
+        "title": "Tree JS",
+        "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Three.js_Icon.svg/512px-Three.js_Icon.svg.png?20211115112438",
+        "percentage": 100,
+        "color": "#000000",
+        "group_title": "Developpement Web",
+        "description": ""
+      },
+      {
+        "title": "TailwindCSS",
+        "img_link": "https://www.svgrepo.com/show/354431/tailwindcss-icon.svg",
+        "percentage": 100,
+        "color": "#16BDB8",
+        "group_title": "Developpement Web",
+        "description": ""
+      },
+      {
+        "title": "SASS",
+        "img_link": "https://www.svgrepo.com/show/374061/sass.svg",
+        "percentage": 100,
+        "color": "#CD6799",
+        "group_title": "Developpement Web",
+        "description": ""
+      },
+      {
+        "title": "Laravel",
+        "img_link": "https://www.svgrepo.com/show/353985/laravel.svg",
+        "percentage": 100,
+        "color": "#FF2D20",
+        "group_title": "Developpement Web",
+        "description": ""
+      },
+      {
+        "title": "Django",
+        "img_link": "https://www.svgrepo.com/show/353657/django-icon.svg",
+        "percentage": 100,
+        "color": "#092E20",
+        "group_title": "Developpement Web",
+        "description": ""
+      },
+      {
+        "title": "Wordpress",
+        "img_link": "https://www.svgrepo.com/show/452136/wordpress.svg",
+        "percentage": 100,
+        "color": "#028CB0",
+        "group_title": "Developpement Web",
+        "description": ""
+      },
+
+      {
+        "title": "React Native",
+        "img_link": "https://www.svgrepo.com/show/355190/reactjs.svg",
+        "percentage": 100,
+        "color": "#00D8FF",
+        "group_title": "Développement Mobile",
+        "description": ""
+      },
+      {
+        "title": "Ionic",
+        "img_link": "https://www.svgrepo.com/show/353912/ionic-icon.svg",
+        "percentage": 100,
+        "color": "#3880FF",
+        "group_title": "Développement Mobile",
+        "description": ""
+      },
+      {
+        "title": "Quasar",
+        "img_link": "https://www.svgrepo.com/show/374024/quasar.svg",
+        "percentage": 100,
+        "color": "#1976D2",
+        "group_title": "Développement Mobile",
+        "description": ""
+      },
+
+      {
+        "title": "Vercel",
+        "img_link": "https://www.svgrepo.com/show/354513/vercel-icon.svg",
+        "percentage": "100",
+        "color": "#000",
+        "group_title": "",
+        "description": ""
+      },
+      {
+        "title": "Azure",
+        "img_link": "https://www.svgrepo.com/show/448271/azure-devops.svg",
+        "percentage": 100,
+        "color": "#2588DF",
+        "group_title": "",
+        "description": ""
+      },
+
+      {
+        "title": "Figma",
+        "img_link": "https://www.svgrepo.com/show/452202/figma.svg",
+        "percentage": 100,
+        "color": "#A259FF",
+        "group_title": "Design",
+        "description": ""
+      },
+      {
+        "title": "canva",
+        "img_link": "https://www.svgrepo.com/show/305835/canva.svg",
+        "percentage": "100",
+        "color": "#000",
+        "group_title": "Design",
+        "description": ""
+      },
+      {
+        "title": "photoshop",
+        "img_link": "https://www.svgrepo.com/show/167746/photoshop.svg",
+        "percentage": 100,
+        "color": "#393687",
+        "group_title": "Design",
+        "description": ""
+      },
+
+      {
+        "title": "Git",
+        "img_link": "https://www.svgrepo.com/show/452210/git.svg",
+        "percentage": 100,
+        "color": "#EE513B",
+        "group_title": "Autres",
+        "description": ""
+      },
+      {
+        "title": "Firebase",
+        "img_link": "https://www.svgrepo.com/show/373595/firebase.svg",
+        "percentage": 100,
+        "color": "#f4b81f",
+        "group_title": "Autres",
+        "description": ""
+      },
+      {
+        "title": "Trello",
+        "img_link": "https://www.svgrepo.com/show/354463/trello.svg",
+        "percentage": 100,
+        "color": "#007CC3",
+        "group_title": "Autres",
+        "description": ""
+      },
+      {
+        "title": "Adobe Premiere Pro",
+        "img_link": "https://www.svgrepo.com/show/452150/adobe-premiere.svg",
+        "percentage": 100,
+        "color": "#00005B",
+        "group_title": "Autres",
+        "description": ""
+      }
+    ]
