@@ -48,7 +48,7 @@ add_action('init', 'register_company_post_type');
 function add_company_custom_fields() {
     add_meta_box(
         'company_custom_fields',
-        __('Company Custom Fields', 'portfolio-api-ressources'),
+        __('Company Meta informations', 'portfolio-api-ressources'),
         'render_company_custom_fields',
         'company',
         'normal',
@@ -56,7 +56,7 @@ function add_company_custom_fields() {
     );
     add_meta_box(
       'company_projects',
-      __('Projects', 'portfolio-api-ressources'),
+      __('Select the projects of this company', 'portfolio-api-ressources'),
       'render_company_projects_field',
       'company',
       'normal',
@@ -65,7 +65,7 @@ function add_company_custom_fields() {
 
   add_meta_box(
       'company_tools',
-      __('Tools', 'portfolio-api-ressources'),
+      __('Select the tools you used here', 'portfolio-api-ressources'),
       'render_company_tools_field',
       'company',
       'normal',
@@ -84,16 +84,23 @@ function render_company_projects_field($post) {
 
   $projects = get_posts($args);
 
-  // Afficher la liste déroulante des projets
-  if(gettype($selected_projects) !='array') $selected_projects = explode(',' , $selected_projects);
-  echo `<label for="company_projects"><?`._e('Projets:', 'portfolio-api-ressources').`</label>`;
-  echo '<select id="company_projects" name="company_projects[]" multiple>';
-  foreach ($projects as $project) {
-      $selected = in_array($project->ID, $selected_projects) ? 'selected' : '';
-      echo '<option value="' . $project->ID . '" ' . $selected . '>' . $project->post_title . '</option>';
-  }
-  echo '</select> <br>';
-}
+  // Récupérer les outils sélectionnés
+    if (!empty($selected_projects) && is_array($selected_projects)) {
+        $selected_projects = array_map('intval', $selected_projects);
+    } else {
+        $selected_projects = array();
+    }
+
+    // Afficher les outils avec cases à cocher
+    echo '<div class="grid grid-cols-6 my-3 gap-4">';
+    foreach ($projects as $project) {
+        echo '<div>';
+            $checked = (in_array($project->ID, $selected_projects)) ? 'checked' : '';
+            echo '<input type="checkbox" name="company_projects[]" id="project_'.$project->ID.'" value="' . $project->ID . '" ' . $checked . '/> <label for="project_'.$project->ID.'"> ' . $project->post_title . '</label>';
+        echo '</div>';
+    }
+    echo '</div>';
+    }
 
 function render_company_tools_field($post) {
   $selected_tools = get_post_meta($post->ID, 'company_tools', true);
@@ -106,15 +113,22 @@ function render_company_tools_field($post) {
 
   $tools = get_posts($args);
 
-  // Afficher la liste déroulante des outils
-  if(gettype($selected_tools) !='array') $selected_tools = explode(',' , $selected_tools);
-  echo `<label for="company_tools"><?`._e('Tools:', 'portfolio-api-ressources').`</label>`;
-  echo '<select id="company_tools" name="company_tools[]" multiple>';
-  foreach ($tools as $tool) {
-      $selected = in_array($tool->ID, $selected_tools) ? 'selected' : '';
-      echo '<option value="' . $tool->ID . '" ' . $selected . '>' . $tool->post_title . '</option>';
+  // Récupérer les outils sélectionnés
+  if (!empty($selected_tools) && is_array($selected_tools)) {
+      $selected_tools = array_map('intval', $selected_tools);
+  } else {
+      $selected_tools = array();
   }
-  echo '</select> <br>';
+
+  // Afficher les outils avec cases à cocher
+  echo '<div class="grid grid-cols-7 my-3 gap-4">';
+  foreach ($tools as $tool) {
+      echo '<div>';
+          $checked = (in_array($tool->ID, $selected_tools)) ? 'checked' : '';
+          echo '<input type="checkbox" name="company_tools[]" id="tool_'.$tool->ID.'" value="' . $tool->ID . '" ' . $checked . '/> <label for="tool_'.$tool->ID.'"> ' . $tool->post_title . '</label>';
+      echo '</div>';
+  }
+  echo '</div>';
 }
 
 function render_company_custom_fields($post) {
@@ -126,25 +140,35 @@ function render_company_custom_fields($post) {
     $baner_url = get_post_meta($post->ID, 'company_baner_url', true);
 
     ?>
-    <label for="company_start_date"><?php _e('Start Date:', 'portfolio-api-ressources'); ?></label>
-    <input type="date" id="company_start_date" name="company_start_date" value="<?php echo esc_attr($start_date); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="company_start_date"><?php _e('Start Date:', 'portfolio-api-ressources'); ?></label>
+        <input type="date" id="company_start_date" name="company_start_date" value="<?php echo esc_attr($start_date); ?>"><br>
+    </div>
 
-    <label for="company_end_date"><?php _e('End Date:', 'portfolio-api-ressources'); ?></label>
-    <input type="date" id="company_end_date" name="company_end_date" value="<?php echo esc_attr($end_date); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="company_end_date"><?php _e('End Date:', 'portfolio-api-ressources'); ?></label>
+        <input type="date" id="company_end_date" name="company_end_date" value="<?php echo esc_attr($end_date); ?>"><br>
+    </div>
 
-    <label for="company_location"><?php _e('Location:', 'portfolio-api-ressources'); ?></label>
-    <input type="text" id="company_location" name="company_location" value="<?php echo esc_attr($location); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="company_location"><?php _e('Location:', 'portfolio-api-ressources'); ?></label>
+        <input type="text" id="company_location" name="company_location" value="<?php echo esc_attr($location); ?>"><br>
+    </div>
 
-    <label for="company_occupation"><?php _e('Occupation:', 'portfolio-api-ressources'); ?></label>
-    <input type="text" id="company_occupation" name="company_occupation" value="<?php echo esc_attr($occupation); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="company_occupation"><?php _e('Occupation:', 'portfolio-api-ressources'); ?></label>
+        <input type="text" id="company_occupation" name="company_occupation" value="<?php echo esc_attr($occupation); ?>"><br>
+    </div>
 
-    <label for="company_tags"><?php _e('Tags:', 'portfolio-api-ressources'); ?></label>
-    <input type="text" id="company_tags" name="company_tags" value="<?php echo esc_attr($tags); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="company_tags"><?php _e('Tags:', 'portfolio-api-ressources'); ?></label>
+        <input type="text" id="company_tags" name="company_tags" value="<?php echo esc_attr($tags); ?>"><br>
+    </div>
 
-    <label for="company_baner_url"><?php _e('Banner URL:', 'portfolio-api-ressources'); ?></label>
-    <input type="text" id="company_baner_url" name="company_baner_url" value="<?php echo esc_url($baner_url); ?>"><br>
-
-    <label for="project_tools"><?php _e('Tools:', 'portfolio-api-ressources'); ?></label>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="company_baner_url"><?php _e('Banner URL:', 'portfolio-api-ressources'); ?></label>
+        <input type="text" id="company_baner_url" name="company_baner_url" value="<?php echo esc_url($baner_url); ?>"><br>
+    </div>
 
     <?php
     // render_company_projects_field($post);

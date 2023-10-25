@@ -47,7 +47,7 @@ add_action('init', 'register_tool_post_type');
 function add_tool_custom_fields() {
     add_meta_box(
         'tool_custom_fields',
-        __('Tool Custom Fields', 'portfolio-api-ressources'),
+        __('Tool Meta informations', 'portfolio-api-ressources'),
         'render_tool_custom_fields',
         'tool',
         'normal',
@@ -62,20 +62,38 @@ function render_tool_custom_fields($post) {
     $group_title = get_post_meta($post->ID, 'tool_group_title', true);
     $description = get_post_meta($post->ID, 'tool_description', true);
     ?>
-    <label for="tool_img_link"><?php _e('Image Link:', 'portfolio-api-ressources'); ?></label>
-    <input type="text" id="tool_img_link" name="tool_img_link" value="<?php echo esc_url($img_link); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="tool_img_link"><?php _e('Image Link:', 'portfolio-api-ressources'); ?></label>
+        <input type="text" id="tool_img_link" class="col-span-3" name="tool_img_link" value="<?php echo esc_url($img_link); ?>"><br>
+    </div>
 
-    <label for="tool_percentage"><?php _e('Percentage:', 'portfolio-api-ressources'); ?></label>
-    <input type="number" id="tool_percentage" name="tool_percentage" value="<?php echo esc_attr($percentage); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="tool_percentage"><?php _e('Percentage:', 'portfolio-api-ressources'); ?></label>
+        <input type="number" class="col-span-3" id="tool_percentage" name="tool_percentage" value="<?php echo esc_attr($percentage); ?>"><br>
+    </div>
 
-    <label for="tool_color"><?php _e('Color:', 'portfolio-api-ressources'); ?></label>
-    <input type="text" id="tool_color" name="tool_color" value="<?php echo esc_attr($color); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="tool_color"><?php _e('Color:', 'portfolio-api-ressources'); ?></label>
+        <input type="text" id="tool_color" class="col-span-3" name="tool_color" value="<?php echo esc_attr($color); ?>"><br>
+    </div>
 
-    <label for="tool_group_title"><?php _e('Group Title:', 'portfolio-api-ressources'); ?></label>
-    <input type="text" id="tool_group_title" name="tool_group_title" value="<?php echo esc_attr($group_title); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="tool_group_title"><?php _e('Group Title:', 'portfolio-api-ressources'); ?></label>
+        <input class="col-span-3" type="text" id="tool_group_title" name="tool_group_title" value="<?php echo esc_attr($group_title); ?>"><br>
+    </div>
 
-    <label for="tool_description"><?php _e('Description:', 'portfolio-api-ressources'); ?></label>
-    <textarea id="tool_description" name="tool_description"><?php echo esc_textarea($description); ?></textarea>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="tool_description"><?php _e('Description:', 'portfolio-api-ressources'); ?></label>
+        <textarea id="tool_description" class="col-span-3" name="tool_description"><?php echo esc_textarea($description); ?></textarea>
+    </div>
+
+    <script>
+        //on cache la boite de content, vu qu'elle ne nous sert pas ici
+        document.getElementById('postdivrich').style.display='none'
+        document.getElementById('edit-slug-box').style.display='none'
+        document.getElementById('postimagediv').style.display='none'
+        
+    </script>
     <?php
 }
 add_action('add_meta_boxes', 'add_tool_custom_fields');

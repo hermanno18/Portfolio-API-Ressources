@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Contributer",
+    "content": "Being a fervent enthusiast of offbeat projects, I find myself constantly seeking ways to learn while also benefiting those who are eager to learn alongside me. Thus, it's not uncommon for me to conceive and develop small to medium-sized projects, subsequently releasing them as open source on my <a target='_blanck' href='https://github.com/hermanno18'>GitHub account</a>. Yes, this is my personal way of sharing my passion, by actively contributing to the world of development that I hold so dear.",
+    "start_date":"2019-02-01",
+    "end_date":"",
+    "location":"Remote",
+    "occupation":"FullStack Engeenier"
+  },
+  {
+    "title": "Freelance",
+    "start_date":"2019-02-01",
+    "end_date":"",
+    "location":"Remote",
+    "occupation":"FullStack Engeenier"
+  },
+  {
+    "title": "Gohze",
+    "start_date":"2022-01-17",
+    "end_date":"2022-07-03",
+    "location":"Biyem-Assi, Yaounde, Cameroon",
+    "occupation":"FrontEnd Engeenier"
+  },
+  {
+    "title": "ITS-Advisory",
+    "start_date":"2022-07-04",
+    "end_date":"",
+    "location":"Fouda, Yaounde, Cameroon",
+    "occupation":"FrontEnd Engeenier"
+  }
+]

@@ -30,6 +30,7 @@ function format_company($company) {
       'end_date' => get_post_meta($company->ID, 'company_end_date', true),
       'location' => get_post_meta($company->ID, 'company_location', true),
       'occupation' => get_post_meta($company->ID, 'company_occupation', true),
+      '_tags' => get_post_meta($company->ID, 'company_tags', true),
       'tags' => format_tags(get_post_meta($company->ID, 'company_tags', true)),
       'content' => apply_filters('the_content', $company->post_content), // Ajout du champ content
       'baner_url' => get_post_meta($company->ID, 'company_baner_url', true),

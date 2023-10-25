@@ -70,8 +70,31 @@ require_once plugin_dir_path(__FILE__) . 'types/Company.php';
 require_once plugin_dir_path(__FILE__) . 'types/contact.php';
 require_once plugin_dir_path(__FILE__) . 'types/tool.php';
 
+function votre_plugin_init() {
+  // Définissez un identifiant unique pour votre style
+  $handle = 'portfolio-api-ressources-style';
+
+  // Définissez le chemin vers votre fichier CSS
+  $src = plugins_url('assets/css/style.css', __FILE__);
+
+  // Spécifiez les dépendances (le cas échéant, laissez vide si aucune)
+  $deps = array();
+
+  // Spécifiez la version du fichier CSS (peut être utile pour le cache)
+  $ver = '1.0';
+
+  // Spécifiez si le style doit être chargé dans l'en-tête ou le pied de page
+  $in_footer = false;
+
+  // Utilisez wp_enqueue_style() pour charger le fichier CSS
+  wp_enqueue_style($handle, $src, $deps, $ver, $in_footer);
+
+}
+add_action('init', 'votre_plugin_init');
+
+
 /**
- * Fonctions à exécuter lors du chargement du plugin 
+ * Fonctions à exécuter lors de l'activation du plugin 
  */
 function activate_portfolio_api_resources_plugin() {
   include(plugin_dir_path(__FILE__) . 'seeder/index.php');

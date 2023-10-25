@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Instapay",
+    "content": "Born from a collaboration between Its-Advisory and Awaeke, a revolution in the electronic payment landscape has emerged in Ivory Coast. Now radiating across West and Central Africa, Instapay is a cutting-edge application that ensures lightning-fast speed, unparalleled security, and offers a plethora of features with renowned partners like Orange Money, MoMo, UBA, Yélé-Money, and its exclusive electronic wallet.<br>Given the client's exacting standards, we exerted tremendous effort to materialize their vision, leveraging state-of-the-art technologies. I was tasked with overseeing the entire web component. My challenge was to ensure the application's seamless functionality while producing aesthetically pleasing interfaces that reflect the professionalism of the application; most importantly, I took great care to leave no exploitable vulnerabilities behind. Instapay represents the most significant undertaking I've encountered in the corporate world, a product I take immense pride in",
+    "source_link": null,
+    "view_link": "https://instapayci.africa",
+    "tags": "economy, Payment Management, Secure Payment App, Electronic Wallet, money-transfer, multi-task app, cash-flow",
+    "date": "2023-10-15",
+    "is_public": true
+  },
+  {
+    "title": "Cash-Collector",
+    "content": "From the ingenuity of the ITS-Advisory team emerged Cashcollector, an innovative product tailored and marketed by them. This revolutionary application is specially designed for the management and tracking of collections, catering to microfinance institutions, municipalities, and much more. With its breathtaking speed, state-of-the-art security, and remarkable adaptability, it incorporates cutting-edge features such as real-time agent tracking, advanced financial calculations, detailed reports, and even budget forecasts based on collection trends.<br>The application comes in web and mobile versions, catering to administrators, field agents, and clients. For my part, this achievement represented a real challenge. As a project manager, I took responsibility for overseeing every step, from meetings with clients to the deployment of each new web/mobile feature. This included analysis, programming, unit and integration testing, as well as the design and development of the web component.<br>Although not available for demo, you have the option to directly contact our company for more information.",
+    "source_link": null,
+    "view_link": "https://its-advisory.com",
+    "tags": "economy, Collection management, multi-task app, Microfinances, Electronic Collections, Financial Analysis, Real-time Tracking, Budget Forecasting",
+    "date": "2023-04-15",
+    "is_public": true
+  },
+  {
+    "title": "Spideli",
+    "content": "Operating out of Cameroon and spearheaded by Vendor&Marketing (a partner of ITS-advisory), Spideli is an application that offers a range of everyday services. From meal deliveries to sending parcels and letters, and even grocery shopping – it's your one-stop solution.<br>My primary responsibility was to conduct comprehensive unit and end-to-end testing for the web and mobile components of various sub-applications within this project. This was no small feat, as it required not only understanding the client's needs, but also ensuring they met the expectations of the end-users. I didn't stop at testing alone; I was also deeply involved in the development of the web component. This involved implementing modules for region segmentation using OpenStreetMap, as well as a module for tracking delivery vehicles.<br>It was a challenge we successfully met, despite the numerous hurdles encountered.",
+    "source_link": null,
+    "view_link": "https://spideli.com",
+    "tags": "delivery, Grocery Shopping, OpenStreetMap Integration, End-to-End Testing, Everyday Services",
+    "date": "2023-07-15",
+    "is_public": true
+  },
+  {
+    "title": "Open-Exam",
+    "content": "An indigenous Cameroonian platform offering comprehensive online education, dedicated to providing specialized preparation for national and international competitions, along with high-quality primary, secondary, and higher education, professional training, and continuous learning.<br>I was a part of the Frontend development team responsible for the web application. My task was to integrate the interfaces as faithfully as possible to the design mockups. This marked my very first significant project in a professional setting and my true introduction to NuxtJS, which has since become my cherished framework. It's only natural to feel a sense of nostalgia when I look back on this project.",
+    "source_link": null,
+    "view_link": "https://gohze.com",
+    "tags": "Online Education, Continuous Learning, Secondary Education, Educational Competitions",
+    "date": "2022-03-15",
+    "is_public": true
+  },
+  {
+    "title": "PayCat",
+    "content": "The Paycat Dapp revolutionizes cryptocurrency usage, allowing holders to make purchases directly on our platform without the need for complex transfers to centralized exchanges (CEXs) and conversion to fiat currency. This circumvents fees and taxes associated with traditional methods. Users can list items or services for sale, accepting transactions in their preferred cryptocurrency, or make purchases using their crypto holdings. Paycat also enables real-time chat during transactions and facilitates peer-to-peer cryptocurrency transfers.<br>Tasked with designing Figma mockups for this groundbreaking application, I maintained a professional, pragmatic framework while infusing an innovative touch. Despite being a newcomer to the cryptocurrency world, understanding its vastness was crucial. With the team's support, I crafted interfaces that precisely embody the Dapp's forward-thinking, futuristic, and professional essence.",
+    "source_link": null,
+    "view_link": "https://paycat.app",
+    "tags": "Crypto Commerce, Fintech Innovation, P2P Cryptocurrency Transactions, Blockchain-based Payments, Decentralized Application",
+    "date": "2023-09-15",
+    "is_public": false
+  },
+  {
+    "title": "Nosihost",
+    "content": "Nosihost, a domain name and web hosting platform, brings a breath of fresh air, novelty, and above all, a challenge to the Cameroonian hosting market. Its highly affordable services make it the preferred choice<br>This application presented a true challenge for me initially, but it also served as a tremendous source of motivation. The task was formidable: designing, integrating, and fully functioning the FrontEnd of such a web application from A to Z, all while contributing to the design of the backend architecture. While drawing inspiration from the best in the market, I also emphasized my personal touch to align with my client's ecosystem, with whom I had previously collaborated on the landing page for their .<a href='https://nosilab-app.com'>Nosilab</a> application",
+    "source_link": null,
+    "view_link": "https://nosihost.com",
+    "tags": "Web Hosting, Cameroonian Hosting, Nosilab, Domain Name",
+    "date": "2023-12-15",
+    "is_public": false
+  },
+  {
+    "title": "Portfolio API Ressources",
+    "content": "Empower developers with our robust API plugin for WordPress! Seamlessly manage projects, companies, and essential tools directly through the admin panel. Effortlessly integrate and organize your professional portfolio data, allowing for easy retrieval and presentation on your website or app. Collaborate with companies, showcase your skills, and highlight achievements - all within the convenience of WordPress. <br/> To expand my proficiency in WordPress, particularly in its API, I crafted this nifty plugin. It not only facilitated my grasp of the WordPress API, but also honed my skills in plugin development for WordPress. In fact, it's now instrumental in managing the entire API of this very site! Yes, this site relies entirely on an API managed by my plugin !",
+    "source_link": "https://github.com/hermanno18/Portfolio-API-Ressources",
+    "view_link": null,
+    "tags": "WordPress API, WordPress plugin, WordPress proficiency, open-source",
+    "date": "2023-10-30",
+    "is_public": true
+  },
+  {
+    "title": "MyGames hub",
+    "content": "Application de paiement électronique, rapide, sécurisée née en cote d'ivoire et utilisée en Afrique de l'ouest. elle inclue des distributeurs tels que Orange Money, MoMo, Et leur propre wallet.",
+    "source_link": "https://github.com/hermanno18/games-hub",
+    "view_link": "https://games-hub.vercel.app",
+    "tags": "economy, management, money-transfer, multi-task app, cash-flow",
+    "date": "",
+    "is_public": false
+  }
+]

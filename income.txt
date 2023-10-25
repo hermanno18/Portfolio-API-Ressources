@@ -1,0 +1,4 @@
+
+-- add some css to have pretty interfaces
+-- add more documentation
+-- integrate it in your project.

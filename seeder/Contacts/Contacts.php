@@ -7,12 +7,13 @@ function seed_contacts() {
         foreach ($contacts_data as $contact) {
             $new_contact_id = wp_insert_post(array(
                 'post_type' => 'contact',
-                'post_title' => $contact['title_fr'],
+                'post_title' => $contact['title'],
                 'post_status' => 'publish',
             ));
 
-            update_post_meta($new_contact_id, 'contact_value_fr', $contact['value_fr']);
-            update_post_meta($new_contact_id, 'contact_value_en', $contact['value_en']);
+            update_post_meta($new_contact_id, 'contact_href', $contact['href']);
+            update_post_meta($new_contact_id, 'contact_icon', $contact['icon']);
+            update_post_meta($new_contact_id, 'contact_value', $contact['value']);
             // Ajoutez les autres champs personnalisés ici...
         }
     }

@@ -48,7 +48,7 @@ add_action('init', 'register_project_post_type');
 function add_project_custom_fields() {
     add_meta_box(
         'project_custom_fields',
-        __('Project Custom Fields', 'portfolio-api-ressources'),
+        __('Project meta informations', 'portfolio-api-ressources'),
         'render_project_custom_fields',
         'project',
         'normal',
@@ -56,7 +56,7 @@ function add_project_custom_fields() {
     );
     add_meta_box(
         'project_company',
-        __('Select Company', 'portfolio-api-ressources'),
+        __('Select Company whre you built this project', 'portfolio-api-ressources'),
         'render_project_company_field',
         'project',
         'normal',
@@ -65,7 +65,7 @@ function add_project_custom_fields() {
 
     add_meta_box(
         'project_tools',
-        __('Tools', 'portfolio-api-ressources'),
+        __('Select the Tools you used for this project', 'portfolio-api-ressources'),
         'render_project_tools_field',
         'project',
         'normal',
@@ -85,13 +85,14 @@ function render_project_company_field($post) {
     $companies = get_posts($args);
 
     // Afficher la liste déroulante des entreprises
-    echo '<label for="project_company">' . __('Select Company', 'portfolio-api-ressources') . '</label>';
-    echo '<select id="project_company" name="project_company">';
-    foreach ($companies as $company) {
-        $selected = ($company->ID == $selected_company) ? 'selected' : '';
-        echo '<option value="' . $company->ID . '" ' . $selected . '>' . $company->post_title . '</option>';
-    }
-    echo '</select><br>';
+    echo '<div class="grid grid-cols-4 my-3 gap-4">';
+        echo '<select id="project_company" name="project_company">';
+        foreach ($companies as $company) {
+            $selected = ($company->ID == $selected_company) ? 'selected' : '';
+            echo '<option value="' . $company->ID . '" ' . $selected . '>' . $company->post_title . '</option>';
+        }
+        echo '</select><br>';
+    echo '</div>';
 }
 
 function render_project_tools_field($post) {
@@ -113,11 +114,14 @@ function render_project_tools_field($post) {
     }
 
     // Afficher les outils avec cases à cocher
-    echo '<label>' . __('Select Tools', 'portfolio-api-ressources') . '</label><br>';
+    echo '<div class="grid grid-cols-7 my-3 gap-4">';
     foreach ($tools as $tool) {
-        $checked = (in_array($tool->ID, $selected_tools)) ? 'checked' : '';
-        echo '<input type="checkbox" name="project_tools[]" value="' . $tool->ID . '" ' . $checked . '> ' . $tool->post_title . '<br>';
+        echo '<div>';
+            $checked = (in_array($tool->ID, $selected_tools)) ? 'checked' : '';
+            echo '<input type="checkbox" name="project_tools[]" id="tool_'.$tool->ID.'" value="' . $tool->ID . '" ' . $checked . '/> <label for="tool_'.$tool->ID.'"> ' . $tool->post_title . '</label>';
+        echo '</div>';
     }
+    echo '</div>';
 }
 
 function render_project_custom_fields($post) {
@@ -132,26 +136,38 @@ function render_project_custom_fields($post) {
     // Ajoutez les autres champs personnalisés ici...
 
     ?>
-    <label for="project_source_link"><?php _e('Source Link:', 'portfolio-api-ressources'); ?></label>
-    <input type="text" id="project_source_link" name="project_source_link" value="<?php echo esc_url($source_link); ?>"><br>
+    <div class="grid grid-cols-6 my-3">
+        <label for="project_source_link"><?php _e('Source Link:', 'portfolio-api-ressources'); ?></label>
+        <input type="text" id="project_source_link" name="project_source_link" value="<?php echo esc_url($source_link); ?>"><br>
+    </div>
 
-    <label for="project_view_link"><?php _e('View Link:', 'portfolio-api-ressources'); ?></label>
-    <input type="text" id="project_view_link" name="project_view_link" value="<?php echo esc_url($view_link); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="project_view_link"><?php _e('View Link:', 'portfolio-api-ressources'); ?></label>
+        <input type="text" id="project_view_link" name="project_view_link" value="<?php echo esc_url($view_link); ?>"><br>
+    </div>
 
-    <label for="project_tags"><?php _e('Tags:', 'portfolio-api-ressources'); ?></label>
-    <input type="text" id="project_tags" name="project_tags" value="<?php echo esc_attr($tags); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="project_tags"><?php _e('Tags:', 'portfolio-api-ressources'); ?></label>
+        <input type="text" id="project_tags" name="project_tags" value="<?php echo esc_attr($tags); ?>"><br>
+    </div>
 
     <!-- <label for="project_main_img_link"><?php // _e('Main Image Link:', 'portfolio-api-ressources'); ?></label>
     <input type="text" id="project_main_img_link" name="project_main_img_link" value="<?php // echo esc_url($main_img_link); ?>"><br> -->
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="project_carousel_imgs"><?php _e('Carousel Images Links:', 'portfolio-api-ressources'); ?></label>
+        <input type="text" id="project_carousel_imgs" name="project_carousel_imgs" value="<?php echo esc_attr($carousel_imgs); ?>"><br>
+    </div>
 
-    <label for="project_carousel_imgs"><?php _e('Carousel Images:', 'portfolio-api-ressources'); ?></label>
-    <input type="text" id="project_carousel_imgs" name="project_carousel_imgs" value="<?php echo esc_attr($carousel_imgs); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="project_date"><?php _e('Date:', 'portfolio-api-ressources'); ?></label>
+        <input type="date" id="project_date" name="project_date" value="<?php echo esc_attr($date); ?>"><br>
+    </div>
 
-    <label for="project_date"><?php _e('Date:', 'portfolio-api-ressources'); ?></label>
-    <input type="date" id="project_date" name="project_date" value="<?php echo esc_attr($date); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="project_is_public"><?php _e('Is Public:', 'portfolio-api-ressources'); ?></label>
+        <input type="checkbox" id="project_is_public" name="project_is_public" <?php checked($is_public, 'on'); ?>><br>
+    </div>
 
-    <label for="project_is_public"><?php _e('Is Public:', 'portfolio-api-ressources'); ?></label>
-    <input type="checkbox" id="project_is_public" name="project_is_public" <?php checked($is_public, 'on'); ?>><br>
 
     <!-- Ajoutez les champs personnalisés supplémentaires ici... -->
     <?php
@@ -252,7 +268,8 @@ function get_projects($request) {
     $formatted_projects = array();
 
     foreach ($projects as $project) {
-        $formatted_projects[] = format_project($project);
+        if(get_post_meta($project->ID, 'project_is_public', true) === 'on') //On affiche que les projects publiques
+            $formatted_projects[] = format_project($project);
     }
 
     return $formatted_projects;

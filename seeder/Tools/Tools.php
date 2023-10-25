@@ -7,12 +7,16 @@ function seed_tools() {
         foreach ($tools_data as $tool) {
             $new_tool_id = wp_insert_post(array(
                 'post_type' => 'tool',
-                'post_title' => $tool['title_fr'],
+                'post_title' => $tool['title'],
                 'post_status' => 'publish',
             ));
 
             update_post_meta($new_tool_id, 'tool_img_link', $tool['img_link']);
             update_post_meta($new_tool_id, 'tool_percentage', $tool['percentage']);
+            update_post_meta($new_tool_id, 'tool_color', $tool['color']);
+            update_post_meta($new_tool_id, 'tool_group_title', $tool['group_title']);
+            update_post_meta($new_tool_id, 'tool_description', $tool['description']);
+            update_post_meta($new_tool_id, 'tool_group_title_slug', sanitize_title($tool['group_title']));
             // Ajoutez les autres champs personnalisés ici...
         }
     }

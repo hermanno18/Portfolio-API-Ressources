@@ -62,20 +62,38 @@ function render_contact_custom_fields($post) {
   $href = get_post_meta($post->ID, 'contact_href', true);
   $description = get_post_meta($post->ID, 'contact_description', true);
   ?>
-  <label for="contact_value"><?php _e('Value:', 'portfolio-api-ressources'); ?></label>
-  <input type="text" id="contact_value" name="contact_value" value="<?php echo esc_attr($value); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="contact_value"><?php _e('Value:', 'portfolio-api-ressources'); ?></label>
+        <input type="text" id="contact_value" name="contact_value" value="<?php echo esc_attr($value); ?>"><br>
+    </div>
 
-  <label for="contact_icon"><?php _e('Icon:', 'portfolio-api-ressources'); ?></label>
-  <input type="text" id="contact_icon" name="contact_icon" value="<?php echo esc_attr($icon); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="contact_icon"><?php _e('Icon:', 'portfolio-api-ressources'); ?></label>
+        <input type="text" id="contact_icon" name="contact_icon" value="<?php echo esc_attr($icon); ?>"><br>
+    </div>
 
-  <label for="contact_isMain"><?php _e('Is Main:', 'portfolio-api-ressources'); ?></label>
-  <input type="checkbox" id="contact_isMain" name="contact_isMain" <?php checked($isMain, 1); ?>><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="contact_isMain"><?php _e('Is Main:', 'portfolio-api-ressources'); ?></label>
+        <input type="checkbox" id="contact_isMain" name="contact_isMain" <?php checked($isMain, 1); ?>><br>
+    </div>
 
-  <label for="contact_href"><?php _e('Href:', 'portfolio-api-ressources'); ?></label>
-  <input type="text" id="contact_href" name="contact_href" value="<?php echo esc_url($href); ?>"><br>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="contact_href"><?php _e('Href:', 'portfolio-api-ressources'); ?></label>
+        <input type="text" id="contact_href" name="contact_href" value="<?php echo esc_url($href); ?>"><br>
+    </div>
 
-  <label for="contact_description"><?php _e('Description:', 'portfolio-api-ressources'); ?></label>
-  <textarea id="contact_description" name="contact_description"><?php echo esc_textarea($description); ?></textarea>
+    <div class="grid grid-cols-6 my-3 ">
+        <label for="contact_description"><?php _e('Description:', 'portfolio-api-ressources'); ?></label>
+        <textarea id="contact_description" name="contact_description"><?php echo esc_textarea($description); ?></textarea>
+    </div>
+
+  <script>
+        //on cache la boite de content, vu qu'elle ne nous sert pas ici
+        document.getElementById('postdivrich').style.display='none'
+        document.getElementById('edit-slug-box').style.display='none'
+        document.getElementById('postimagediv').style.display='none'
+        
+    </script>
   <?php
 }
 
