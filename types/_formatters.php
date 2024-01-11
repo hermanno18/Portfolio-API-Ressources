@@ -8,19 +8,22 @@ function format_company($company) {
   $projects = get_post_meta($company_id, 'company_projects', true);
   $formatted_projects = array();
 
-  foreach ($projects as $project_id) {
+  if(gettype($projects) != 'string') {
+    foreach ($projects as $project_id) {
       $project = get_post($project_id);
-
       if($project) $formatted_projects[] = format_project($project);
+    }
   }
 
   // Récupérer les outils liés à cette entreprise
   $tools = get_post_meta($company_id, 'company_tools', true);
   $formatted_tools = array();
 
-  foreach ($tools as $tool_id) {
+  if(gettype($tools) != 'string') {
+    foreach ($tools as $tool_id) {
       $tool = get_post($tool_id);
       $formatted_tools[] = format_tool($tool);
+    }
   }
 
   return array(
@@ -54,17 +57,21 @@ function format_project($project) {
   }
   $company_id = get_post_meta($project->ID, 'project_company', true);
   $company = get_post($company_id);
-  $formatted_company = array(
-    'id' => $company->ID,
-    'title' => $company->post_title,
-    'start_date' => get_post_meta($company->ID, 'company_start_date', true),
-    'end_date' => get_post_meta($company->ID, 'company_end_date', true),
-    'baner_url' => get_post_meta($company->ID, 'company_baner_url', true),
-    'featured_image' => get_the_post_thumbnail_url($company->ID, 'full'),
-  );
+  $formatted_company = null;
+  if($company)
+    $formatted_company = array(
+      'id' => $company->ID,
+      'title' => $company->post_title,
+      'slug' => $company->post_name,
+      'start_date' => get_post_meta($company->ID, 'company_start_date', true),
+      'end_date' => get_post_meta($company->ID, 'company_end_date', true),
+      'baner_url' => get_post_meta($company->ID, 'company_baner_url', true),
+      'featured_image' => get_the_post_thumbnail_url($company->ID, 'full'),
+    );
   return array(
       'id' => $project->ID,
       'title' => $project->post_title,
+      'slug' => $project->post_name,
       'content' => apply_filters('the_content', $project->post_content),
       'source_link' => get_post_meta($project->ID, 'project_source_link', true),
       'view_link' => get_post_meta($project->ID, 'project_view_link', true),
@@ -72,7 +79,7 @@ function format_project($project) {
       'carousel_imgs' => format_tags(get_post_meta($project->ID, 'project_carousel_imgs', true)),
       'company' => $formatted_company,
       'date' => get_post_meta($project->ID, 'project_date', true),
-      'featured_image' => get_the_post_thumbnail_url($company->ID, 'full'),
+      'featured_image' => get_the_post_thumbnail_url($project->ID, 'full'),
       'tools' => $formatted_tools,
       'is_public' => get_post_meta($project->ID, 'project_is_public', true) === 'on'
   );
@@ -98,7 +105,7 @@ function format_contact ($contact) {
       'title' => $contact->post_title,
       'value' => get_post_meta($contact->ID, 'contact_value', true),
       'icon' => get_post_meta($contact->ID, 'contact_icon', true),
-      'isMain' => get_post_meta($contact->ID, 'contact_isMain', true) === "1",
+      'isMain' => get_post_meta($contact->ID, 'contact_isMain', true),
       'href' => get_post_meta($contact->ID, 'contact_href', true),
       'description' => get_post_meta($contact->ID, 'contact_description', true),
   );

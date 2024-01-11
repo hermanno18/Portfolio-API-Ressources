@@ -118,7 +118,7 @@
         "img_link": "https://www.svgrepo.com/show/354513/vercel-icon.svg",
         "percentage": "100",
         "color": "#000",
-        "group_title": "",
+        "group_title": "devops",
         "description": ""
       },
       {
@@ -126,7 +126,7 @@
         "img_link": "https://www.svgrepo.com/show/448271/azure-devops.svg",
         "percentage": 100,
         "color": "#2588DF",
-        "group_title": "",
+        "group_title": "devops",
         "description": ""
       },
 

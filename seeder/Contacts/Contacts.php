@@ -11,8 +11,8 @@ function seed_contacts() {
                 'post_status' => 'publish',
             ));
 
-            // update_post_meta($new_contact_id, 'contact_href', $contact['href']);
-            // update_post_meta($new_contact_id, 'contact_icon', $contact['icon']);
+            update_post_meta($new_contact_id, 'contact_href', $contact['href']);
+            update_post_meta($new_contact_id, 'contact_icon', $contact['icon']);
             update_post_meta($new_contact_id, 'contact_value', $contact['value']);
             // Ajoutez les autres champs personnalisés ici...
         }

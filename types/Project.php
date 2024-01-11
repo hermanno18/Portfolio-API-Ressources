@@ -268,7 +268,7 @@ function get_projects($request) {
     $formatted_projects = array();
 
     foreach ($projects as $project) {
-        if(get_post_meta($project->ID, 'project_is_public', true) === 'on') //On affiche que les projects publiques
+        // if(get_post_meta($project->ID, 'project_is_public', true) === 'on') //On affiche que les projects publiques
             $formatted_projects[] = format_project($project);
     }
 
