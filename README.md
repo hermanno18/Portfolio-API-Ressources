@@ -12,8 +12,8 @@ Supercharge your WordPress backend with our powerful API plugin! This versatile 
 
 ## Installation
 
-1. Download the ZIP file from [link to the ZIP file].
-2. Unzip the file into the `wp-content/plugins/` directory of your WordPress site.
+1. Download the ZIP file.
+2. Unzip the file into the `wp-content/plugins/` directory of your WordPress site (Or you can just import it from the admin dashboard).
 3. Activate the plugin from the admin dashboard.
 
 ## Configuration
@@ -25,7 +25,7 @@ you just have to update the json file of the ressource you need, and add your da
 
 ## License
 
-This plugin is distributed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+This plugin is distributed under the MIT License. See the [LICENSE](LICENSE.txt) file for more information.
 
 ## Versions and Modifications
 
@@ -33,8 +33,8 @@ If you wish to contribute or make modifications to this plugin, please refer to 
 
 ## Credits
 
-This plugin was created by [Your Name].
+This plugin was created by [Hermann FOKOU](https://github.com/hermanno18).
 
 ## Original Version
 
-If you modify or redistribute this plugin, please include a reference to the original version created by [Your Name] and a link to [link to the original version].
+If you modify or redistribute this plugin, please include a reference to the original version created by [Hermann FOKOU](https://github.com/hermanno18) and a link to (https://github.com/hermanno18/Portfolio-API-Ressources).
